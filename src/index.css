@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	background: #000300;
+}
+
+.overlay {
+	position: absolute;
+	z-index: -1;
+	mix-blend-mode: hard-light;
+}
+
+.video {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	object-fit: cover;
+	z-index: -10;
+}
+
+.videoDiv {
+	position: absolute;
+	height: 90%;
+	width: 100%;
+	z-index: -10;
+}
+
+.videoDiv video {
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	z-index: -10;
+}
+
+.videoDiv::after {
+	content: '';
+	position: absolute;
+	background: rgba(10, 84, 107, 0.307);
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	mix-blend-mode: multiply;
+	z-index: -10;
+}
