@@ -8,7 +8,7 @@ const Cards = () => {
 			<div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8'>
 				<div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-xl scale-90 hover:scale-95 duration-700'>
 					<img
-						className='w-40 bg-transparent mx-auto mt-[-5rem] bg-white'
+						className='w-40 bg-transparent mx-auto mt-[-5rem]'
 						src={pic2}
 						alt='single'
 					/>
@@ -27,7 +27,7 @@ const Cards = () => {
 				</div>
 				<div className='w-full shadow-xl flex flex-col p-4 my-4 md:scale-105 rounded-xl scale-100 hover:scale-110 duration-700'>
 					<img
-						className='w-40 bg-transparent mx-auto mt-[-5rem] bg-white'
+						className='w-40 bg-transparent mx-auto mt-[-5rem]'
 						src={pic3}
 						alt='single'
 					/>
@@ -46,7 +46,7 @@ const Cards = () => {
 				</div>
 				<div className='w-full shadow-xl flex flex-col p-4 my-4 scale-90 rounded-xl hover:scale-95 duration-700'>
 					<img
-						className='w-40 mx-auto bg-transparent mt-[-5rem] bg-white'
+						className='w-40 mx-auto bg-transparent mt-[-5rem] '
 						src={pic4}
 						alt='single'
 					/>

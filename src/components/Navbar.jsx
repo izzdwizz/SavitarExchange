@@ -31,7 +31,7 @@ const Navbar = () => {
 			<div
 				className={
 					toggled
-						? 'fixed left-0 top-0 h-full w-[60%] bg-[#000300] border-r border-r-gray-900 ease-in-out duration-1000'
+						? 'fixed left-0 top-0 h-full w-[60%] bg-[#000300] border-r border-r-gray-900 ease-in-out duration-1000 z-10'
 						: 'fixed left-[-100%]'
 				}
 			>
