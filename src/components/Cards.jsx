@@ -22,9 +22,9 @@ const Cards = () => {
 			setmega_rate((750 - Btcprice * 0.0025).toFixed(0));
 			setbits_rate((750 + Btcprice * 0.005).toFixed(0));
 		} else if (Btcprice > 30000 && Btcprice <= 40000) {
-			setbulk_rate((750 + Btcprice * 0.0025).toFixed(0));
-			setmega_rate((750 - Btcprice * 0.0025).toFixed(0));
-			setbits_rate((750 + Btcprice * 0.005).toFixed(0));
+			setbulk_rate((700 + Btcprice * 0.0025).toFixed(0));
+			setmega_rate((700 - Btcprice * 0.0025).toFixed(0));
+			setbits_rate((700 + Btcprice * 0.005).toFixed(0));
 		} else {
 			setbulk_rate(700);
 			setmega_rate(650);
