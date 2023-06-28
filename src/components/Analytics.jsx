@@ -5,7 +5,11 @@ const Analytics = () => {
 	return (
 		<div className='w-full bg-white py-16 px-4'>
 			<div className='max-w-[1240px] mx-auto grid md:grid-cols-2 '>
-				<img src={pic} alt='laptop' className='w-[500px] mx-auto my-4' />
+				<img
+					src={pic}
+					alt='laptop'
+					className='w-[350px] mx-auto my-4 hover:scale-110 ease-in-out duration-700'
+				/>
 				<div className='flex flex-col justify-center md:items-start'>
 					<p className='text-[#e7a619] uppercase font-bold'>
 						Exchange Dashboard

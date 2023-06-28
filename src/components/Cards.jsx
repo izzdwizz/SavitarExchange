@@ -75,10 +75,7 @@ const Cards = () => {
 						<p className='py-2 border-b mx-8'>Paid with Priority</p>
 						<p className='py-2 border-b mx-8 mt-8 text-sm'>
 							Current BTC price:{' '}
-							<span>
-								${''}
-								{Btcprice}
-							</span>
+							<span>{Btcprice == 'NaN' ? 'Loading...' : ` $${Btcprice}`}</span>
 						</p>
 					</div>
 					<button className='cursor-pointer text-[#e7a619] w-[200px] rounded-lg font-medium my-6 mx-auto py-3 bg-black'>

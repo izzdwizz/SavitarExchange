@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-
+import avatar from '../assets/prof.png';
 const Navbar = () => {
 	const [toggled, setToggled] = useState(false);
-
+	const [logged, setLogged] = useState(false);
 	const HandleNav = () => {
 		setToggled(!toggled);
 	};
@@ -24,6 +24,22 @@ const Navbar = () => {
 
 				<li className='p-4 cursor-pointer hover:opacity-80'>Contact</li>
 			</ul>
+			{!logged ? (
+				<div className='w-[10rem] py-[0.6rem] rounded-md cursor-pointer relative outline-none border-2 ml-8 border-[#e7a619] hover:bg-transparent hover:border-white hover:text-[#e7a619] font-semibold ease-in-out duration-500'>
+					Sign In
+				</div>
+			) : (
+				<div className='flex flex-row items-center gap-4 justify-end min-w-fit p-0 m-0'>
+					{' '}
+					<img
+						src={avatar}
+						className=' rounded-full ml-16 h-[2rem] w-[2rem]'
+						alt='ProfileImage'
+					/>
+					<h1 className='min-w-fit font-medium'>Welcome, Izuchukwu!</h1>
+				</div>
+			)}
+
 			<div onClick={HandleNav} className='block md:hidden '>
 				{toggled ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
 			</div>
