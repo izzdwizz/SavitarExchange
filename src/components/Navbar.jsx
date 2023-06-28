@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import avatar from '../assets/prof.png';
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
 	const [toggled, setToggled] = useState(false);
 	const [logged, setLogged] = useState(false);
@@ -25,9 +27,11 @@ const Navbar = () => {
 				<li className='p-4 cursor-pointer hover:opacity-80'>Contact</li>
 			</ul>
 			{!logged ? (
-				<div className='w-[10rem] py-[0.6rem] rounded-md cursor-pointer relative outline-none border-2 ml-8 border-[#e7a619] hover:bg-transparent hover:border-white hover:text-[#e7a619] font-semibold ease-in-out duration-500'>
-					Sign In
-				</div>
+				<Link to='/sign-in'>
+					<div className='w-[10rem] py-[0.6rem] rounded-md cursor-pointer relative outline-none border-2 ml-8 border-[#e7a619] hover:bg-transparent hover:border-white hover:text-[#e7a619] font-semibold ease-in-out duration-500'>
+						Sign In
+					</div>
+				</Link>
 			) : (
 				<div className='flex flex-row items-center gap-4 justify-end min-w-fit p-0 m-0'>
 					{' '}
