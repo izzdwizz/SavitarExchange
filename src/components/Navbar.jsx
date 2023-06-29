@@ -26,14 +26,15 @@ const Navbar = () => {
 
 				<li className='p-4 cursor-pointer hover:opacity-80'>Contact</li>
 			</ul>
+
 			{!logged ? (
 				<Link to='/sign-in'>
-					<div className='w-[10rem] py-[0.6rem] rounded-md cursor-pointer relative outline-none border-2 ml-8 border-[#e7a619] hover:bg-transparent hover:border-white hover:text-[#e7a619] font-semibold ease-in-out duration-500'>
+					<div className='hidden md:block w-[10rem]  py-[0.6rem] rounded-md cursor-pointer relative outline-none border-2 ml-8 border-[#e7a619] hover:bg-transparent hover:border-white hover:text-[#e7a619] font-semibold ease-in-out duration-500'>
 						Sign In
 					</div>
 				</Link>
 			) : (
-				<div className='flex flex-row items-center gap-4 justify-end min-w-fit p-0 m-0'>
+				<div className=' hidden md:flex flex flex-row items-center gap-4 justify-end min-w-fit p-0 m-0'>
 					{' '}
 					<img
 						src={avatar}
@@ -69,6 +70,23 @@ const Navbar = () => {
 
 					<li className='p-4 border-b border-b-gray-600'>Contact</li>
 				</ul>
+				{!logged ? (
+					<Link to='/sign-in'>
+						<div className='w-[10rem] py-[0.6rem] mt-8 rounded-md cursor-pointer relative outline-none border-2 ml-8 border-[#e7a619] hover:bg-transparent hover:border-white hover:text-[#e7a619] font-semibold ease-in-out duration-500'>
+							Sign In
+						</div>
+					</Link>
+				) : (
+					<div className='flex flex-row items-center gap-4 justify-center min-w-fit p-0 m-0'>
+						{' '}
+						<img
+							src={avatar}
+							className=' rounded-full h-[1rem] w-[1rem]'
+							alt='ProfileImage'
+						/>
+						<h1 className='min-w-fit text-sm'>Welcome, Izuchukwu!</h1>
+					</div>
+				)}
 			</div>
 		</div>
 	);

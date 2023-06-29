@@ -18,7 +18,7 @@ const Banner = () => {
 				></video>
 			</div>
 			<div className='max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center'>
-				<div className='py-4 px-4 bg-[#fefefe3f] rounded-full backdrop-blur'>
+				<div className='py-4 px-4 bg-[#fefefe3f] rounded-[40%] md:rounded-full backdrop-blur'>
 					<p className='uppercase text-[#e7a619] font-bold p-2'>
 						growing with crypto trading
 					</p>

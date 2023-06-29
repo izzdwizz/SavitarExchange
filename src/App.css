@@ -12,6 +12,27 @@
 	/* scrollbar-3dlight-color: #282c34; */
 }
 
+@media screen and (max-width: 600px) {
+	.make_small {
+		display: flex !important
+    ;
+		flex-direction: column;
+	}
+	.affect_small {
+		position: relative;
+		right: 2rem;
+		top: 0.5rem;
+	}
+
+	.make_smaller {
+		background: #0f172a;
+	}
+
+	.make_smallest {
+		display: none;
+	}
+}
+
 ::-webkit-scrollbar {
 	width: 6px;
 }
