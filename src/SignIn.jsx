@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SignUp from './assets/currency-coin-reward-box-6743487-5580576.png';
 import { AiOutlineMoneyCollect } from 'react-icons/ai';
 import { RiLoginCircleFill } from 'react-icons/ri';
@@ -7,6 +7,8 @@ import qrCode from './assets/app-qr.2ba45e6c.png';
 import AppleLogo from './assets/icons8-app-store-240.png';
 import play from './assets/icons8-google-play-store-48.png';
 const SignIn = () => {
+	const [already, setAlready] = useState(false);
+
 	return (
 		<>
 			{' '}
@@ -18,15 +20,15 @@ const SignIn = () => {
 					<h1 className='w-full absolute top-4 left-4 justify-start text-left text-3xl font-bold text-[#e7a619]'>
 						enodatio.{' '}
 					</h1>
-					<img src={SignUp} className='w-[38rem]' alt='SignIn-img' />
+					<img src={SignUp} className='w-[30rem]' alt='SignIn-img' />
 
 					<div className='absolute bottom-8 left-8'>
-						<h2 className=' text-[#e7a619] font-extrabold text-2xl '>
+						<h2 className=' text-[#e7a619] font-extrabold text-xl '>
 							Built For Your Convenience
 						</h2>
-						<p className='text-cyan-50 flex flex-row gap-4 justify-center items-center font-bold text-lg mt-2'>
+						<p className='text-cyan-50 flex flex-row gap-4 justify-center items-center font-bold text-base mt-2'>
 							SIGN UP <AiOutlineMoneyCollect className='text-[#e7a619]' /> SEND
-							CARDS
+							COINS
 							<AiOutlineMoneyCollect className='text-[#e7a619]' /> GET PAID
 						</p>
 					</div>
@@ -34,45 +36,113 @@ const SignIn = () => {
 
 				<div className='bg-slate-800 min-h-screen flex flex-col justify-center items-center make_smaller'>
 					<div className='flex flex-col justify-center items-center mb-8'>
-						<RiLoginCircleFill className='text-[#e7a619] w-[7rem] h-[7rem] hover:-rotate-180 hover:scale-110 ease-in-out duration-1000' />
+						<RiLoginCircleFill className='text-[#e7a619] mt-4 w-[7rem] h-[7rem] hover:-rotate-180 hover:scale-110 ease-in-out duration-1000' />
 						<p className='font-bold text-[#e7a619] my-4 text-lg '>
 							Let's get you ready to Earn!
 						</p>
 
 						<form action='submit' className='flex flex-col w-[14rem] mt-4'>
-							<label
-								htmlFor='username'
-								className='mb-2 text-slate-100 font-semibold'
-							>
-								Username
-							</label>
-							<input
-								id='username'
-								type='text'
-								className='rounded-[10px] p-2 outline-none'
-							/>
-							<label
-								htmlFor='password'
-								className='mb-2 text-slate-100 mt-4 font-semibold'
-							>
-								Password
-							</label>
-							<input
-								type='password'
-								className='rounded-[10px] p-2 outline-none'
-							/>
-							<p className='text-sm mt-2 text-cyan-50 cursor-pointer hover:underline ease-in-out duration-1000'>
-								Forgot Password?
-							</p>
+							{already ? (
+								<>
+									<label
+										htmlFor='username'
+										className='mb-2 text-slate-100 font-semibold'
+									>
+										Username
+									</label>
+									<input
+										id='username'
+										type='text'
+										className='rounded-[10px] p-2 outline-none'
+									/>
+									<label
+										htmlFor='password'
+										className='mb-2 text-slate-100 mt-4 font-semibold'
+									>
+										Password
+									</label>
+									<input
+										type='password'
+										className='rounded-[10px] p-2 outline-none'
+									/>
+									<p className='text-sm mt-2 text-cyan-50 cursor-pointer hover:underline ease-in-out duration-1000'>
+										Forgot Password?
+									</p>
 
-							<button
-								onClick={(e) => {
-									e.preventDefault();
-								}}
-								className='mt-8 rounded-full py-4 bg-black text-[#e7a619] hover:text-black hover:bg-[#e7a619] ease-in-out duration-500 hover:font-bold'
-							>
-								<Link to='/'> Sign In </Link>
-							</button>
+									<button
+										onClick={(e) => {
+											e.preventDefault();
+										}}
+										className='mt-8 rounded-full py-4 bg-black text-[#e7a619] hover:text-black hover:bg-[#e7a619] ease-in-out duration-500 hover:font-bold'
+									>
+										<Link to='/account'> Sign In </Link>
+									</button>
+								</>
+							) : (
+								<>
+									<label
+										htmlFor='username'
+										className='mb-0 text-slate-100 font-semibold text-sm'
+									>
+										Username
+									</label>
+									<input
+										id='username'
+										type='text'
+										className='rounded-[10px] px-2 py-1 outline-none'
+									/>
+									<label
+										htmlFor='email'
+										className='mb-0 text-slate-100 mt-2 font-semibold text-sm'
+									>
+										Email Address
+									</label>
+									<input
+										type='email'
+										className='rounded-[10px] px-2 py-1 outline-none'
+									/>
+									<label
+										htmlFor='password'
+										className='mb-0 text-slate-100 mt-2 font-semibold text-sm'
+									>
+										Password
+									</label>
+									<input
+										type='password'
+										className='rounded-[10px] px-2 py-1 outline-none'
+									/>
+									<label
+										htmlFor='Wallet Address'
+										className='mb-0 text-slate-100 mt-2 font-semibold text-sm'
+									>
+										Preferred Wallet Address
+									</label>
+									<input
+										type='text'
+										className='rounded-[10px] px-2 py-1 outline-none'
+									/>
+									<p className='text-sm mt-2 text-cyan-50  ease-in-out duration-1000'>
+										Already have an account?{' '}
+										<span
+											onClick={() => {
+												setAlready(true);
+											}}
+											className='cursor-pointer hover:underline text-[#e7a619]'
+										>
+											Sign in
+										</span>
+									</p>
+
+									<button
+										onClick={(e) => {
+											e.preventDefault();
+										}}
+										className='mt-8 rounded-full py-4 bg-black text-[#e7a619] hover:text-black hover:bg-[#e7a619] ease-in-out duration-500 hover:font-bold'
+									>
+										<Link to='/account'> Sign In </Link>
+									</button>
+								</>
+							)}
 						</form>
 						<div className='grid grid-cols-3 grid-rows-2 place-items-center gap-0 md:flex md:flex-row justify-around bg-slate-800 md:bg-slate-700 md:mt-10 mt-7 rounded-[8px] w-[22rem]  md:w-[40rem] md:items-center p-0  '>
 							<img

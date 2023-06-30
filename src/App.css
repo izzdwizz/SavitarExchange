@@ -2,9 +2,18 @@
 	text-align: center;
 }
 
+#root {
+	overflow: hidden;
+}
+
 .App-logo {
 	height: 40vmin;
 	pointer-events: none;
+}
+
+nav a.active {
+	background: #1f2937;
+	border-radius: 100%;
 }
 
 * {
