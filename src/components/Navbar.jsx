@@ -16,15 +16,28 @@ const Navbar = () => {
 			</h1>
 
 			<ul className='hidden md:flex '>
-				<li className='p-4 cursor-pointer hover:opacity-80'>Home</li>
+				<li className='p-4 cursor-pointer hover:opacity-80' href='#home'>
+					Home
+				</li>
 
-				<li className='p-4 cursor-pointer hover:opacity-80'>Company</li>
+				<li className='p-4 cursor-pointer hover:opacity-80' href='#company'>
+					Company
+				</li>
 
-				<li className='p-4 cursor-pointer hover:opacity-80'>Resources</li>
+				<li className='p-4 cursor-pointer hover:opacity-80' href='#resources'>
+					Resources
+				</li>
 
-				<li className='p-4  w-max cursor-pointer hover:opacity-80'>About Us</li>
+				<li
+					className='p-4  w-max cursor-pointer hover:opacity-80'
+					href='#about'
+				>
+					About Us
+				</li>
 
-				<li className='p-4 cursor-pointer hover:opacity-80'>Contact</li>
+				<li className='p-4 cursor-pointer hover:opacity-80' href='#contact'>
+					Contact
+				</li>
 			</ul>
 
 			{!logged ? (

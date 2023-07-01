@@ -11,9 +11,9 @@
 	pointer-events: none;
 }
 
-nav a.active {
+.active {
 	background: #1f2937;
-	border-radius: 100%;
+	border-radius: 9999px;
 }
 
 * {

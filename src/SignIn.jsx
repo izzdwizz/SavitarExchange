@@ -129,7 +129,7 @@ const SignIn = () => {
 											}}
 											className='cursor-pointer hover:underline text-[#e7a619]'
 										>
-											Sign in
+											Sign Up
 										</span>
 									</p>
 
