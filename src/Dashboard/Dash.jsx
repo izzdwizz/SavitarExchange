@@ -7,8 +7,11 @@ import { MdOutlineAccountCircle } from 'react-icons/md';
 import { CiLogout } from 'react-icons/ci';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
+import { useStateContext } from '../Context/ContextProvider';
 
 const Dash = () => {
+	const { toggled, setToggled } = useStateContext();
+
 	return (
 		<>
 			<div className='relative flex flex-row bg-slate-800'>
@@ -62,7 +65,11 @@ const Dash = () => {
 				<Sidebar />
 
 				<div className=' bg-slate-900 p-8 h-screen w-full'>
-					<div className=' flex flex-col z-50 min-h-screen md:ml-80 w-full'>
+					<div
+						className={`flex flex-col z-50 min-h-screen  w-full ${
+							toggled ? 'md:ml-80' : ''
+						} `}
+					>
 						<Outlet />
 					</div>
 				</div>

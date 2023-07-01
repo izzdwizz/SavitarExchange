@@ -5,6 +5,7 @@ const StateContext = createContext();
 const baseUrl = 'https://api.coinranking.com/v2/coin/Qwsogvtv82FCd/price';
 export const ContextProvider = ({ children }) => {
 	const [price, setPrice] = useState('');
+	const [toggled, setToggled] = useState(true);
 
 	useEffect(() => {
 		getCurrentPrice();
@@ -39,6 +40,8 @@ export const ContextProvider = ({ children }) => {
 			value={{
 				price,
 				setPrice,
+				toggled,
+				setToggled,
 			}}
 		>
 			{children}

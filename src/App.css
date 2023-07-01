@@ -21,6 +21,36 @@
 	/* scrollbar-3dlight-color: #282c34; */
 }
 
+.rowhold {
+	display: grid;
+	grid-template-areas:
+		'row2 row3'
+		'row4 row5'
+		'row6 row6';
+	grid-template-rows: auto;
+	grid-template-columns: 1fr 1fr;
+	place-items: start;
+	align-items: flex-end;
+
+	gap: 0px 20px;
+}
+
+.row2 {
+	grid-area: row2;
+}
+.row3 {
+	grid-area: row3;
+}
+.row4 {
+	grid-area: row4;
+}
+.row5 {
+	grid-area: row5;
+}
+.row6 {
+	grid-area: row6;
+}
+
 @media screen and (max-width: 600px) {
 	.make_small {
 		display: flex !important

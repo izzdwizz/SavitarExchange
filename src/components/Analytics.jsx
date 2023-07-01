@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import pic from '../assets/bitcoin-exchange-5341941-4466119.png';
 
 const Analytics = () => {
@@ -29,7 +30,7 @@ const Analytics = () => {
 					</p>
 
 					<button className='cursor-pointer text-[#e7a619] w-[200px] rounded-lg font-medium my-6 mx-auto md:mx-0 py-3 bg-black hover:scale-105 duration-300'>
-						Get Started
+						<Link to='/sign-in'> Get Started </Link>
 					</button>
 				</div>
 			</div>

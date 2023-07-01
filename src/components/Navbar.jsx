@@ -47,7 +47,7 @@ const Navbar = () => {
 					</div>
 				</Link>
 			) : (
-				<div className=' hidden md:flex flex flex-row items-center gap-4 justify-end min-w-fit p-0 m-0'>
+				<div className=' hidden md:flex flex-row items-center gap-4 justify-end min-w-fit p-0 m-0'>
 					{' '}
 					<img
 						src={avatar}

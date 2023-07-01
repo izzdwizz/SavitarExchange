@@ -8,10 +8,11 @@ import { CiLogout } from 'react-icons/ci';
 import { Link, NavLink } from 'react-router-dom';
 import { RiCloseFill } from 'react-icons/ri';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { useStateContext } from '../Context/ContextProvider';
 
 const Sidebar = () => {
 	const [active, setActive] = useState(false);
-	const [toggled, setToggled] = useState(true);
+	const { toggled, setToggled } = useStateContext();
 	const HandleNav = () => {
 		setToggled(!toggled);
 	};
@@ -38,7 +39,7 @@ const Sidebar = () => {
 			<div
 				className={
 					toggled
-						? ' fixed p-8 flex flex-col items-start   justify-start top-0 left-0 w-[60%] z-50 md:w-[20%] bg-slate-950 min-h-screen border-r border-gray-600 ease-in-out duration-1000'
+						? ' fixed p-8 flex flex-col items-start   justify-start top-0 left-0 w-[60%] z-50 md:w-[20%] bg-slate-950 min-h-screen border-r border-gray-600 ease-in-out duration-500'
 						: 'fixed left-[-100%]'
 				}
 			>
