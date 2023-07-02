@@ -26,7 +26,7 @@ const Buy = () => {
 					Sell
 				</div>
 			</div>
-			<div className=' h-screen bg-transparent'>
+			<div className='TFB h-screen bg-transparent'>
 				<div className='flex flex-col md:grid md:grid-cols-2 md:grid-rows-2 justify-center items-center gap-4	h-screen w-full'>
 					<div className='bg-slate-800 h-32 w-full  p-4 rounded-md '></div>
 					<div className=' flex flex-col bg-transparent border-[1px] text-sm border-[#fbfafa9b] text-[#fbfafae4] h-32 w-full p-4 min-h-max min-w-max rounded-md overflow-hidden '>
