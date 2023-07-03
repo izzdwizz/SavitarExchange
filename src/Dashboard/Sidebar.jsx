@@ -27,7 +27,7 @@ const Sidebar = () => {
 				{toggled ? (
 					<AiOutlineClose
 						size={20}
-						className='text-[#fbfafacc] w-10 md:py-1 bg-gray-800 relative left-[11.6rem] md:left-[16rem] ease-in duration-1000  rounded-full '
+						className='text-[#fbfafacc] w-10 md:py-1 hover:bg-gray-800 relative left-[11.6rem] md:left-[16rem] ease-in duration-500  rounded-md bg-transparent border border-gray-600 '
 					/>
 				) : (
 					<AiOutlineMenu

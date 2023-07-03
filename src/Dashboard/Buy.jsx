@@ -1,6 +1,126 @@
 import React, { useState } from 'react';
+import { MdVerified } from 'react-icons/md';
 const Buy = () => {
 	const [activeNavLink, setActiveNavLink] = useState('buy');
+
+	const exchangers = [
+		{
+			name: 'White_Fang',
+			icon: 'W',
+			orders: Math.floor(Math.random() * 3000) + 1000,
+			completion: Math.floor(Math.random() * 100) + 10,
+			amount: Math.floor(Math.random() * 10000) + 1000,
+			rate: Math.floor(Math.random() * 800) + 600,
+			iconStat: false,
+		},
+		{
+			name: 'Uchiha',
+			icon: 'U',
+			orders: Math.floor(Math.random() * 3000) + 1000,
+			completion: Math.floor(Math.random() * 100) + 10,
+			amount: Math.floor(Math.random() * 10000) + 1000,
+			rate: Math.floor(Math.random() * 800) + 600,
+			iconStat: true,
+		},
+		{
+			name: 'Drego',
+			icon: 'D',
+			orders: Math.floor(Math.random() * 3000) + 1000,
+			completion: Math.floor(Math.random() * 100) + 10,
+			amount: Math.floor(Math.random() * 10000) + 1000,
+			rate: Math.floor(Math.random() * 800) + 600,
+			iconStat: false,
+		},
+		{
+			name: 'Quuen-BtC',
+			icon: 'W',
+			orders: Math.floor(Math.random() * 3000) + 1000,
+			completion: Math.floor(Math.random() * 100) + 10,
+			amount: Math.floor(Math.random() * 10000) + 1000,
+			rate: Math.floor(Math.random() * 800) + 600,
+			iconStat: true,
+		},
+		{
+			name: 'Papichulo',
+			icon: 'P',
+			orders: Math.floor(Math.random() * 3000) + 1000,
+			completion: Math.floor(Math.random() * 100) + 10,
+			amount: Math.floor(Math.random() * 10000) + 1000,
+			rate: Math.floor(Math.random() * 800) + 600,
+			iconStat: true,
+		},
+		{
+			name: 'MainCharacter',
+			icon: 'I',
+			orders: Math.floor(Math.random() * 3000) + 1000,
+			completion: Math.floor(Math.random() * 100) + 10,
+			amount: Math.floor(Math.random() * 10000) + 1000,
+			rate: Math.floor(Math.random() * 800) + 600,
+		},
+		{
+			name: 'Himawari',
+			icon: 'H',
+			orders: Math.floor(Math.random() * 3000) + 1000,
+			completion: Math.floor(Math.random() * 100) + 10,
+			amount: Math.floor(Math.random() * 10000) + 1000,
+			rate: Math.floor(Math.random() * 800) + 600,
+			iconStat: true,
+		},
+		{
+			name: 'Ten-Ten',
+			icon: 'T',
+			orders: Math.floor(Math.random() * 3000) + 1000,
+			completion: Math.floor(Math.random() * 100) + 10,
+			amount: Math.floor(Math.random() * 10000) + 1000,
+			rate: Math.floor(Math.random() * 800) + 600,
+			iconStat: false,
+		},
+		{
+			name: 'Ovito',
+			icon: 'O',
+			orders: Math.floor(Math.random() * 3000) + 1000,
+			completion: Math.floor(Math.random() * 100) + 10,
+			amount: Math.floor(Math.random() * 10000) + 1000,
+			rate: Math.floor(Math.random() * 800) + 600,
+			iconStat: true,
+		},
+		{
+			name: 'FugakU',
+			icon: 'F',
+			orders: Math.floor(Math.random() * 3000) + 1000,
+			completion: Math.floor(Math.random() * 100) + 10,
+			amount: Math.floor(Math.random() * 10000) + 1000,
+			rate: Math.floor(Math.random() * 800) + 600,
+			iconStat: true,
+		},
+		{
+			name: 'Itachi',
+			icon: 'I',
+			orders: Math.floor(Math.random() * 3000) + 1000,
+			completion: Math.floor(Math.random() * 100) + 10,
+			amount: Math.floor(Math.random() * 10000) + 1000,
+			rate: Math.floor(Math.random() * 800) + 600,
+			iconStat: true,
+		},
+		{
+			name: 'ScorpionKing',
+			icon: 'S',
+			orders: Math.floor(Math.random() * 3000) + 1000,
+			completion: Math.floor(Math.random() * 100) + 10,
+			amount: Math.floor(Math.random() * 10000) + 1000,
+			rate: Math.floor(Math.random() * 800) + 600,
+			iconStat: false,
+		},
+		{
+			name: 'General_iroh',
+			icon: 'G',
+			orders: Math.floor(Math.random() * 3000) + 1000,
+			completion: Math.floor(Math.random() * 100) + 10,
+			amount: Math.floor(Math.random() * 10000) + 1000,
+			rate: Math.floor(Math.random() * 800) + 600,
+			iconStat: false,
+		},
+	];
 
 	const handleNavLinkClick = (navlink) => {
 		setActiveNavLink(navlink);
@@ -26,35 +146,57 @@ const Buy = () => {
 					Sell
 				</div>
 			</div>
-			<div className='TFB h-screen bg-transparent'>
-				<div className='flex flex-col md:grid md:grid-cols-2 md:grid-rows-2 justify-center items-center gap-4	h-screen w-full'>
-					<div className='bg-slate-800 h-32 w-full  p-4 rounded-md '></div>
-					<div className=' flex flex-col bg-transparent border-[1px] text-sm border-[#fbfafa9b] text-[#fbfafae4] h-32 w-full p-4 min-h-max min-w-max rounded-md overflow-hidden '>
-						<div className=' col-span-2  w-full flex flex-row justify-start items-start p-2 gap-2 border-b border-[#fbfafa9b]'>
-							<p className='rounded-full h-6 w-6 flex items-center justify-center bg-blue-600 '>
-								T
-							</p>
-							<div>
-								The_Black_Eye et it<span>icon</span>
+			<div className=' h-screen bg-transparent '>
+				<div className='flex flex-col md:grid md:grid-cols-4 md:grid-rows-4 mt-[8rem] justify-center items-center gap-4  	h-screen w-full'>
+					{exchangers.map((exchanger, i) => (
+						<div className='flex-wrap py-20'>
+							<div className=' flex flex-col scale-90 bg-slate-800  text-sm  text-[#fbfafae4] max-w-max p-4 h-max md:min-w-max rounded-md  '>
+								<div className=' col-span-2  w-full flex flex-row justify-start items-start p-1 gap-2 border-b border-[#fbfafa6c]'>
+									<p className='rounded-full h-6 w-6 flex items-center justify-center bg-blue-600 '>
+										{exchanger.icon}
+									</p>
+									<div className='font-bold flex flex-row justify-center items-center gap-1 text-lg'>
+										{exchanger.name}
+										{''}
+										<span className='text-[#e7a619]'>
+											{exchanger.iconStat && <MdVerified />}
+										</span>
+									</div>
+								</div>
+								<div className='rowhold '>
+									<div className='mt-2 row2'>
+										<div className=' border-l-slate-300 mb-2'>
+											<span className='font-bold'>
+												Orders:{''}
+												{''}
+											</span>
+
+											{''}
+
+											{exchanger.orders}
+										</div>
+									</div>
+									<div className='row3 mb-2'>
+										<span className='font-bold'>Completions:</span> {''}
+										{exchanger.completion}%
+									</div>
+
+									<div className='row4'>
+										<span className='font-bold'>Available Amount:</span> $
+										{exchanger.amount}
+									</div>
+
+									<div className='row5'>
+										<span className='font-bold'>Rate:</span> {exchanger.rate}/$
+									</div>
+
+									<button className='row6 bg-green-400 rounded-md text-[#fbfafae4] mt-2 p-2 hover:scale-105 ease-in-out duration-500 col-span-2'>
+										Buy USDT
+									</button>
+								</div>
 							</div>
 						</div>
-						<div className='rowhold '>
-							<div className='mt-2 row2'>
-								<div className=' border-l-slate-300'>1125 orders</div>
-							</div>
-							<div className='row3'> 98.40% Completion</div>
-
-							<div className='row4'>Available Amount: $54500</div>
-
-							<div className='row5'>Rate: 680</div>
-
-							<button className='row6 bg-green-400 rounded-md text-[#fbfafae4] mt-4 font-bold'>
-								Buy USDT
-							</button>
-						</div>
-					</div>
-					<div className='bg-gray-600 h-32 w-full p-4 rounded-md '></div>
-					<div className='bg-gray-600 h-32 w-full p-4 rounded-md '></div>
+					))}
 				</div>
 			</div>
 		</>
