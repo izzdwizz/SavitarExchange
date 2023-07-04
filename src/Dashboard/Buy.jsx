@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MdVerified } from 'react-icons/md';
 const Buy = () => {
-	const [activeNavLink, setActiveNavLink] = useState('buy');
+	const [activeNavLink, setActiveNavLink] = useState('Buy');
 
 	const exchangers = [
 		{
@@ -126,31 +126,31 @@ const Buy = () => {
 		setActiveNavLink(navlink);
 	};
 	return (
-		<>
+		<div className='flex flex-col items-center pb-10 mb-52'>
 			{' '}
 			<div className='bg-transparent flex flex-row justify-center items-center  gap-2 border-[1px] border-[#fbfafa9b] min-h-max min-w-max h-10 w-24 py-[0.1rem] px-[0.1rem] rounded-md '>
 				<div
-					className={`w-full justify-center items-center h-full rounded-md flex text-[#fbfafae4] ${
-						activeNavLink === 'buy' ? 'bg-green-400' : ''
+					className={`w-full cursor-pointer justify-center items-center h-full rounded-md flex text-[#fbfafae4] ${
+						activeNavLink === 'Buy' ? 'bg-green-400' : ''
 					}`}
-					onClick={() => handleNavLinkClick('buy')}
+					onClick={() => handleNavLinkClick('Buy')}
 				>
 					Buy
 				</div>
 				<div
-					className={`w-full justify-center items-center h-full rounded-md rounded- flex text-[#fbfafae4] ${
-						activeNavLink === 'sell' ? 'bg-red-400' : ''
+					className={`w-full cursor-pointer justify-center items-center h-full rounded-md rounded- flex text-[#fbfafae4] ${
+						activeNavLink === 'Sell' ? 'bg-red-400' : ''
 					}`}
-					onClick={() => handleNavLinkClick('sell')}
+					onClick={() => handleNavLinkClick('Sell')}
 				>
 					Sell
 				</div>
 			</div>
-			<div className=' h-screen bg-transparent '>
-				<div className='flex flex-col md:grid md:grid-cols-4 md:grid-rows-4 mt-[8rem] justify-center items-center gap-4  	h-screen w-full'>
+			<div className=' h-screen bg-transparent relative mt-[70rem] md:mt-2'>
+				<div className='flex flex-col md:grid md:grid-cols-3 md:grid-flow-row mt-[8rem] justify-center items-center gap-4 mb-10 pb-10 	h-screen w-full'>
 					{exchangers.map((exchanger, i) => (
-						<div className='flex-wrap py-20'>
-							<div className=' flex flex-col scale-90 bg-slate-800  text-sm  text-[#fbfafae4] max-w-max p-4 h-max md:min-w-max rounded-md  '>
+						<div className='flex-wrap py-4'>
+							<div className=' flex flex-col scale-90 bg-slate-800  text-sm  text-[#fbfafae4] w-[20rem] p-4 h-max  rounded-md  '>
 								<div className=' col-span-2  w-full flex flex-row justify-start items-start p-1 gap-2 border-b border-[#fbfafa6c]'>
 									<p className='rounded-full h-6 w-6 flex items-center justify-center bg-blue-600 '>
 										{exchanger.icon}
@@ -190,8 +190,12 @@ const Buy = () => {
 										<span className='font-bold'>Rate:</span> {exchanger.rate}/$
 									</div>
 
-									<button className='row6 bg-green-400 rounded-md text-[#fbfafae4] mt-2 p-2 hover:scale-105 ease-in-out duration-500 col-span-2'>
-										Buy USDT
+									<button
+										className={`row6  rounded-md text-[#fbfafae4] mt-2 p-2 hover:scale-105 ease-in-out duration-500 col-span-2 ${
+											activeNavLink === 'Sell' ? 'bg-red-400' : 'bg-green-400'
+										}`}
+									>
+										{activeNavLink} USDT
 									</button>
 								</div>
 							</div>
@@ -199,7 +203,7 @@ const Buy = () => {
 					))}
 				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 

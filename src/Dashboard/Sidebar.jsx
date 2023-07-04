@@ -32,7 +32,7 @@ const Sidebar = () => {
 				) : (
 					<AiOutlineMenu
 						size={20}
-						className='text-[#fbfafacc] bg-gray-800 relative  rounded-full  '
+						className='text-[#fbfafacc] bg-gray-800 relative left-2  rounded-full  '
 					/>
 				)}
 			</div>
