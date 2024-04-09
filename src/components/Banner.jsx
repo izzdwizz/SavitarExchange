@@ -18,7 +18,8 @@ const Banner = () => {
 				></video>
 			</div>
 			<div className='max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center'>
-				<div className='py-4 px-4 bg-[#fefefe3f] rounded-[40%] md:rounded-full backdrop-blur'>
+				<div className='py-4 px-4 bg-[#433c3c74] rounded-[3rem] md:rounded-[3rem] backdrop-blur-md border-styled'>
+					{/* border-radius formerly full for large screens and 40% mobile */}
 					<p className='uppercase text-[#e7a619] font-bold p-2'>
 						growing with crypto trading
 					</p>
@@ -37,7 +38,7 @@ const Banner = () => {
 							loop
 						/>
 					</div>
-					<p className='md:text-2xl text-xl font-bold text-gray-500'>
+					<p className='md:text-xl text-lg font-[200] text-gray-400'>
 						{' '}
 						Monitor your portfolio growth to increase revenue by trading with us
 						today.

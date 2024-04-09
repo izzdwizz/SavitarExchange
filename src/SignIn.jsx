@@ -34,7 +34,7 @@ const SignIn = () => {
 					</div>
 				</div>
 
-				<div className='bg-slate-800 min-h-screen flex flex-col justify-center items-center make_smaller'>
+				<div className='bg-slate-800 min-h-screen flex flex-col justify-center items-center make_smaller overflow-hidden'>
 					<div className='flex flex-col justify-center items-center mb-8'>
 						<RiLoginCircleFill className='text-[#e7a619] mt-4 w-[7rem] h-[7rem] hover:-rotate-180 hover:scale-110 ease-in-out duration-1000' />
 						<p className='font-bold text-[#e7a619] my-4 text-lg '>
@@ -191,7 +191,6 @@ const SignIn = () => {
 					</div>
 				</div>
 			</div>
-			;
 		</>
 	);
 };

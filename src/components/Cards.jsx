@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import pic2 from '../assets/euro-payment-schedule-5624308-4687610.png';
 import pic3 from '../assets/payment-schedule-6151264-5024874.png';
 import pic4 from '../assets/pound-payment-schedule-5624331-4687565.png';
@@ -10,9 +10,9 @@ const Cards = () => {
 	let { price } = useStateContext();
 	let Btcprice = parseFloat(price).toFixed(2);
 
-	//Rate Calculation Function using switch statement
+	//Rate Calculation Function using if Else
 
-	const rateValue = () => {
+	const rateValue = useCallback(() => {
 		if (Btcprice > 0 && Btcprice <= 20000) {
 			setbulk_rate((800 + Btcprice * 0.0025).toFixed(0));
 			setmega_rate((800 - Btcprice * 0.0025).toFixed(0));
@@ -30,11 +30,11 @@ const Cards = () => {
 			setmega_rate(650);
 			setbits_rate(800);
 		}
-	};
+	}, []);
 
 	useEffect(() => {
 		rateValue();
-	}, [price, rateValue]);
+	}, [price]);
 
 	console.log(bulk_rate, mega_rate, bits_rate);
 	return (

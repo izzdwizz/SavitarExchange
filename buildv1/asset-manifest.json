@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7338749f.css",
+    "main.js": "/static/js/main.7116c643.js",
+    "static/media/finance.mp4": "/static/media/finance.ddd6b3458dffe899ebc9.mp4",
+    "static/media/currency-coin-reward-box-6743487-5580576.png": "/static/media/currency-coin-reward-box-6743487-5580576.4263672248c35fd3d511.png",
+    "static/media/bitcoin-exchange-5341941-4466119.png": "/static/media/bitcoin-exchange-5341941-4466119.4b6ed7a3b2d3a4907f11.png",
+    "static/media/payment-schedule-6151264-5024874.png": "/static/media/payment-schedule-6151264-5024874.af9b7b8f101da9f359ff.png",
+    "static/media/euro-payment-schedule-5624308-4687610.png": "/static/media/euro-payment-schedule-5624308-4687610.8a166fa33df76de96d32.png",
+    "static/media/pound-payment-schedule-5624331-4687565.png": "/static/media/pound-payment-schedule-5624331-4687565.d0d59cd7efb51d603ddc.png",
+    "static/media/prof.png": "/static/media/prof.c8b4a340dd7340498693.png",
+    "static/media/app-qr.2ba45e6c.png": "/static/media/app-qr.2ba45e6c.adaecd92a25b7ecee7e4.png",
+    "static/media/icons8-app-store-240.png": "/static/media/icons8-app-store-240.1df473cf5493ee3f2bb5.png",
+    "index.html": "/index.html",
+    "main.7338749f.css.map": "/static/css/main.7338749f.css.map",
+    "main.7116c643.js.map": "/static/js/main.7116c643.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7338749f.css",
+    "static/js/main.7116c643.js"
+  ]
+}

@@ -3,13 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Main from './Main';
 import { ContextProvider } from './Context/ContextProvider';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+let queryClient = new QueryClient();
+
 root.render(
 	<React.StrictMode>
-		<ContextProvider>
-			<Main />
-		</ContextProvider>
+		<QueryClientProvider client={queryClient}>
+			<ContextProvider>
+				<Main />
+			</ContextProvider>
+		</QueryClientProvider>
 	</React.StrictMode>
 );
 
