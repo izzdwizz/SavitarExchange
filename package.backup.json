@@ -22,21 +22,14 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "jest",
+		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
 	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		]
+		"extends": ["react-app", "react-app/jest"]
 	},
 	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
+		"production": [">0.2%", "not dead", "not op_mini all"],
 		"development": [
 			"last 1 chrome version",
 			"last 1 firefox version",
@@ -44,9 +37,7 @@
 		]
 	},
 	"devDependencies": {
-		"@babel/preset-react": "^7.24.1",
 		"autoprefixer": "^10.4.14",
-		"babel-jest": "^29.7.0",
 		"jest": "^29.7.0",
 		"postcss": "^8.4.23",
 		"supertest": "^6.3.4",

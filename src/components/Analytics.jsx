@@ -9,7 +9,7 @@ const Analytics = () => {
 				<img
 					src={pic}
 					alt='laptop'
-					className='w-[350px] mx-auto my-4 hover:scale-110 ease-in-out duration-700'
+					className='md:w-[350px] w-[200px] mx-auto my-4 hover:rotate-180 ease-in-out duration-[1.5s]'
 				/>
 				<div className='flex flex-col justify-center md:items-start'>
 					<p className='text-[#e7a619] uppercase font-bold'>

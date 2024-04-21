@@ -8,7 +8,7 @@ const Cards = () => {
 	let [bits_rate, setbits_rate] = useState();
 	let [mega_rate, setmega_rate] = useState();
 	let { price } = useStateContext();
-	let Btcprice = parseFloat(price).toFixed(2);
+	let Btcprice = parseFloat(price)?.toFixed(2);
 
 	//Rate Calculation Function using if Else
 
@@ -49,7 +49,9 @@ const Cards = () => {
 					<h2 className='text-2xl font-bold text-center py-8 uppercase text-[#e7a619]'>
 						Regular
 					</h2>
-					<p className='text-4xl font-bold text-center'>{bits_rate}</p>
+					<p className='text-4xl font-bold text-center'>
+						{price ? bits_rate : 'Bits Rate'}
+					</p>
 					<div className='text-center font-medium'>
 						<p className='py-2 border-b mx-8 mt-8 '>Only bit payments</p>
 						<p className='py-2 border-b mx-8'>$10 - $499</p>
@@ -68,7 +70,12 @@ const Cards = () => {
 					<h2 className='text-2xl font-bold text-center py-8 uppercase text-[#e7a619]'>
 						Lite
 					</h2>
-					<p className='text-4xl font-bold text-center'>{bulk_rate}</p>
+					<p
+						data-testid='bulk-price'
+						className='text-4xl font-bold text-center'
+					>
+						{price ? bulk_rate : 'Bulk Rate'}
+					</p>
 					<div className='text-center font-medium'>
 						<p className='py-2 border-b mx-8 mt-8 '>Only Bulk payments</p>
 						<p className='py-2 border-b mx-8'>$499 - $5,999</p>
@@ -91,7 +98,9 @@ const Cards = () => {
 					<h2 className='text-2xl font-bold text-center py-8 uppercase text-[#e7a619]'>
 						Pro
 					</h2>
-					<p className='text-4xl font-bold text-center'>{mega_rate}</p>
+					<p className='text-4xl font-bold text-center'>
+						{price ? mega_rate : 'Mega Rate'}
+					</p>
 					<div className='text-center font-medium'>
 						<p className='py-2 border-b mx-8 mt-8 '>
 							Only Bulk and Mega payments

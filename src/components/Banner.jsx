@@ -21,7 +21,7 @@ const Banner = () => {
 				<div className='py-4 px-4 bg-[#433c3c74] rounded-[3rem] md:rounded-[3rem] backdrop-blur-md border-styled'>
 					{/* border-radius formerly full for large screens and 40% mobile */}
 					<p className='uppercase text-[#e7a619] font-bold p-2'>
-						growing with crypto trading
+						growing your crypto portfolio
 					</p>
 					<h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6 '>
 						Grow with Crypto.
@@ -31,7 +31,7 @@ const Banner = () => {
 							Fast, flexible financing for {''}
 						</p>
 						<Typed
-							className='md:text-4xl sm:text-3xl text-xl font-bold md:pl-4 pl-2 text-[#e7a619] max-w-max'
+							className='md:text-4xl sm:text-3xl text-lg font-bold md:pl-4 pl-2 text-[#e7a619] max-w-max'
 							strings={['P2P', 'Fast Trade', 'Low Fees']}
 							typeSpeed={120}
 							backSpeed={140}
